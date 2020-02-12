@@ -6,7 +6,7 @@ class MainPage extends Component {
     render() {
         const ComponentHoc = Page(Main);
         return (
-            <div>
+            <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
                 <ComponentHoc {...this.props}/>
             </div>
         );
