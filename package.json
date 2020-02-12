@@ -5,42 +5,40 @@
   "keywords": [
     "gabriela radu developer"
   ],
-  "homepage": "https://planour.wedding/",
+  "homepage": "https://github.com/gabrielaradu/reactjstailwindcsstemplate",
   "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.3.1",
-    "prop-types": "latest",
-    "env-cmd": "^8.0.2",
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.7.0",
-    "eslint": "^6.7.2",
-    "eslint-loader": "^3.0.0",
-    "eslint-plugin-react": "^7.17.0",
-    "express": "^4.16.4",
-    "i18next": "^19.0.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-i18next": "^11.3.1",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "env-cmd src/config/.env.local react-scripts start",
-    "build": "env-cmd src/config/.env.production react-scripts build",
-    "test": "react-scripts test --watchAll",
-    "eject": "react-scripts eject",
-    "watch-tests": "react-scripts test --watchAll",
-    "lint": "eslint src/**/*.js src/**/*.jsx"
+    "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
+    "start": "npm run build:style && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
-    "fetch-mock": "^7.3.0",
-    "react-test-renderer": "^16.6.1"
+    "autoprefixer": "^9.6.0",
+    "i18next": "^19.1.0",
+    "postcss-cli": "^6.1.2",
+    "tailwindcss": "^1.0.4"
   }
 }
